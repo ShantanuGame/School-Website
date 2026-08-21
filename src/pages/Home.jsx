@@ -72,7 +72,12 @@ const quickInfo = [
   },
 ];
 
-export default function Home() {
+export default function Home({ navigate }) {
+  const handleNavigation = (event, path) => {
+    event.preventDefault();
+    navigate(path);
+  };
+
   return (
     <>
       {/* HERO */}
@@ -85,7 +90,9 @@ export default function Home() {
               {institution.department}
             </div>
 
-            <p className="institution-type">{institution.type}</p>
+            <p className="institution-type">
+              {institution.type}
+            </p>
 
             <h1>{institution.name}</h1>
 
@@ -94,7 +101,13 @@ export default function Home() {
             </p>
 
             <div className="hero-buttons">
-              <a href="/about" className="button button-primary">
+              <a
+                href="/about"
+                className="button button-primary"
+                onClick={(event) =>
+                  handleNavigation(event, "/about")
+                }
+              >
                 शाळेची माहिती
                 <ArrowRight size={18} />
               </a>
@@ -102,6 +115,9 @@ export default function Home() {
               <a
                 href="/facilities"
                 className="button button-outline"
+                onClick={(event) =>
+                  handleNavigation(event, "/facilities")
+                }
               >
                 सुविधा & Gallery
               </a>
@@ -145,7 +161,13 @@ export default function Home() {
               <h2>शाळेची वैशिष्ट्ये</h2>
             </div>
 
-            <a href="/facilities" className="view-all">
+            <a
+              href="/facilities"
+              className="view-all"
+              onClick={(event) =>
+                handleNavigation(event, "/facilities")
+              }
+            >
               सुविधा पहा
               <ArrowRight size={17} />
             </a>
@@ -169,7 +191,12 @@ export default function Home() {
 
                   <p>{item.description}</p>
 
-                  <a href="/facilities">
+                  <a
+                    href="/facilities"
+                    onClick={(event) =>
+                      handleNavigation(event, "/facilities")
+                    }
+                  >
                     सुविधा पहा
                     <ArrowRight size={15} />
                   </a>
@@ -198,6 +225,9 @@ export default function Home() {
           <a
             href="/contact"
             className="button button-dark"
+            onClick={(event) =>
+              handleNavigation(event, "/contact")
+            }
           >
             संपर्क
             <ArrowRight size={17} />
