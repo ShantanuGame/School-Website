@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 
 import headmasterImage from "../assets/Gallery/HeadMaster.jpeg";
-import superintendentImage from "../assets/Gallery/Superintendent.jpeg";
+//import superintendentImage from "../assets/Gallery/Superintendent.jpeg";
 
 const institution = {
   name: "श्री गाडगे महाराज मिशन, मुंबई संचलित, माध्यमिक आश्रमशाळा, वरवंडी.",
@@ -91,7 +91,7 @@ const locationPhotos = [
   },
   {
     title: "Hostel Superintendent's Residence",
-    image: superintendentImage,
+    //image: superintendentImage,
     description: "Photograph of the Hostel Superintendent's residence.",
     latitude: "—",
     longitude: "—",
