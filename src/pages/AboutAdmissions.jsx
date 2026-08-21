@@ -8,6 +8,9 @@ import {
   Users,
 } from "lucide-react";
 
+import headmasterImage from "../assets/Gallery/HeadMaster.jpeg";
+import superintendentImage from "../assets/Gallery/Superintendent.jpeg";
+
 const institution = {
   name: "श्री गाडगे महाराज मिशन, मुंबई संचलित, माध्यमिक आश्रमशाळा, वरवंडी.",
 
@@ -81,14 +84,14 @@ const employeeSummary = {
 const locationPhotos = [
   {
     title: "Headmaster's Room",
-    image: "/src/assets/Gallery/HeadMaster.jpeg",
+    image: headmasterImage,
     description: "Photograph of the Headmaster's room.",
     latitude: "—",
     longitude: "—",
   },
   {
     title: "Hostel Superintendent's Residence",
-    image: "/src/assets/Gallery/Superintendent.jpeg",
+    image: superintendentImage,
     description: "Photograph of the Hostel Superintendent's residence.",
     latitude: "—",
     longitude: "—",
