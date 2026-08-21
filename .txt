@@ -1,0 +1,46 @@
+Minimal Website Structure (4 Pages)
+1. Home
+Institution's full official name, type (आश्रमशाळा / वसतिगृह / राजे यशवंतराव होळकर इंग्रजी शाळा)
+Government affiliation line (इतर मागास बहुजन कल्याण विभाग, महाराष्ट्र शासन)
+Short welcome note + 3–4 highlight photos
+Quick contact strip (phone/email) in the footer
+
+2. About & Admissions
+
+(merged — institutional identity + enrollment data)
+
+Full address, district/taluka/village
+Registration/recognition details, medium of instruction, standards/curriculum offered
+Sanctioned admission capacity
+Table — Total Students (all 13 columns: total/resident/non-resident × primary/secondary/higher-secondary)
+Table — Aadhaar Linked Students (same structure)
+Table — Aadhaar Not Linked Students (same structure)
+Table — Staff/Teacher Sanctioned vs Filled vs Vacant (teaching + non-teaching)
+
+3. Facilities & Gallery
+
+(merged — every photo requirement from items 18–35, each with its own caption instead of a separate page)
+
+Hostel dept. timetable (meals/breakfast schedule)
+School dept. timetable
+Classroom photos with count & area
+Student room photos with room/bed/mattress count
+Dining hall photos with plate/bowl/table count
+Playground photo with GPS location
+Toilets/bathrooms (boys & girls, separately)
+Drinking water source photo with filter count
+Computer room & digital facilities
+Separate boys/girls residential block with GPS
+Google Map / geo-location embed
+Fire extinguisher photo
+CCTV photo
+Kitchen & storeroom photo
+Gate & boundary wall photo
+Tree plantation photo
+Parent committee photo + contact
+Alumni association list/photo + contact
+4. Contact
+Phone number(s), official email
+Postal address for correspondence
+Contact person/designation
+Embedded map (if not already placed on page 3)
