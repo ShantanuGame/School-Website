@@ -1,20 +1,45 @@
 import {
-  Bath,
   Camera,
   Coffee,
-  Cpu,
   Droplets,
   Flame,
   GraduationCap,
-  Home,
   MapPin,
   Monitor,
   Shield,
   Trees,
   Users,
-  Utensils,
   Warehouse,
 } from "lucide-react";
+
+/* =========================================
+   IMAGE IMPORTS
+========================================= */
+
+import classroom8 from "../assets/Gallery/8th.jpeg";
+import classroom9 from "../assets/Gallery/9th.jpeg";
+import classroom10 from "../assets/Gallery/10th.jpeg";
+
+import boysRoom from "../assets/Gallery/BoysRoom.jpeg";
+import girlsRoom from "../assets/Gallery/GirlsRoom.jpeg";
+
+import diningHallImage from "../assets/Gallery/Hall.jpeg";
+
+import toiletsImage from "../assets/Gallery/TB.jpeg";
+import waterImage from "../assets/Gallery/water.jpeg";
+import digitalFacilitiesImage from "../assets/Gallery/Digital facilities.jpeg";
+import fireImage from "../assets/Gallery/Fire.jpeg";
+import cctvImage from "../assets/Gallery/CCTV.png";
+import kitchenImage from "../assets/Gallery/Kit.jpeg";
+import ironGateImage from "../assets/Gallery/Irongate.jpeg";
+import treeImage from "../assets/Gallery/Tree.jpeg";
+
+import parentsImage from "../assets/Gallery/parent.jpeg";
+import alumniImage from "../assets/Gallery/alu.png";
+
+/* =========================================
+   HOSTEL TIMETABLE
+========================================= */
 
 const hostelTimetable = [
   {
@@ -35,9 +60,13 @@ const hostelTimetable = [
   {
     meal: "Festival / Special Meals",
     time: "—",
-    details: "meal details for festivals and special occasions",
-  }
+    details: "Meal details for festivals and special occasions",
+  },
 ];
+
+/* =========================================
+   SCHOOL TIMETABLE
+========================================= */
 
 const schoolTimetable = [
   {
@@ -47,12 +76,10 @@ const schoolTimetable = [
   {
     period: "Period 2",
     time: "—",
-
   },
   {
     period: "Period 3",
     time: "—",
-
   },
   {
     period: "Period 4",
@@ -150,31 +177,39 @@ const weeklyFoodMenu = [
   },
 ];
 
+/* =========================================
+   CLASSROOMS
+========================================= */
+
 const classrooms = [
   {
     title: "8th Classrooms",
-    image: "/src/assets/Gallery/8th.jpeg",
+    image: classroom8,
     count: "—",
     area: "— sq. ft.",
   },
   {
     title: "9th Classrooms",
-    image: "/src/assets/Gallery/9th.jpeg",
+    image: classroom9,
     count: "—",
     area: "— sq. ft.",
   },
   {
     title: "10th Classrooms",
-    image: "/src/assets/Gallery/10th.jpeg",
+    image: classroom10,
     count: "—",
     area: "— sq. ft.",
   },
 ];
 
+/* =========================================
+   RESIDENTIAL ROOMS
+========================================= */
+
 const residentialRooms = [
   {
     title: "Boys' Residential Rooms",
-    image: "/src/assets/Gallery/BoysRoom.jpeg",
+    image: boysRoom,
     rooms: "—",
     area: "— sq. ft.",
     beds: "—",
@@ -182,7 +217,7 @@ const residentialRooms = [
   },
   {
     title: "Girls' Residential Rooms",
-    image: "/src/assets/Gallery/GirlsRoom.jpeg",
+    image: girlsRoom,
     rooms: "—",
     area: "— sq. ft.",
     beds: "—",
@@ -190,40 +225,25 @@ const residentialRooms = [
   },
 ];
 
+/* =========================================
+   DINING HALL
+========================================= */
+
 const diningHall = {
-  image: "/src/assets/Gallery/Hall.jpeg",
-  plates: "—",
-  bowls: "—",
-  glasses: "—",
-  tables: "—",
+  image: diningHallImage,
 };
 
-const locationFacilities = [
-  {
-    title: "Playground",
-    image: "/src/assets/hero.png",
-    latitude: "—",
-    longitude: "—",
-  },
-  {
-    title: "Boys' Residential Block",
-    image: "/src/assets/hero.png",
-    latitude: "—",
-    longitude: "—",
-  },
-  {
-    title: "Girls' Residential Block",
-    image: "/src/assets/hero.png",
-    latitude: "—",
-    longitude: "—",
-  },
-];
+/* =========================================
+   OTHER FACILITIES
+========================================= */
 
 const simpleFacilities = [
   {
     title: "Toilets & Bathrooms",
-    icon: Bath,
-    image: "/src/assets/Gallery/TB.jpeg",
+    icon: ({ size }) => (
+      <span style={{ fontSize: size }}>🚻</span>
+    ),
+    image: toiletsImage,
     description:
       "Separate toilet and bathroom facilities for boys and girls.",
     items: [
@@ -234,7 +254,7 @@ const simpleFacilities = [
   {
     title: "Drinking Water Sources",
     icon: Droplets,
-    image: "/src/assets/Gallery/water.jpeg",
+    image: waterImage,
     description:
       "Photographs and information about drinking-water sources and RO/filter facilities.",
     items: [
@@ -246,7 +266,7 @@ const simpleFacilities = [
   {
     title: "Computer Room & Digital Facilities",
     icon: Monitor,
-    image: "/src/assets/Gallery/Digital facilities.jpeg",
+    image: digitalFacilitiesImage,
     description:
       "Computer room and digital learning facilities available within the institution.",
     items: [
@@ -258,7 +278,7 @@ const simpleFacilities = [
   {
     title: "Fire Extinguishers",
     icon: Flame,
-    image: "/src/assets/Gallery/Fire.jpeg",
+    image: fireImage,
     description:
       "Photographs documenting fire extinguishers installed within the premises.",
     items: [
@@ -269,7 +289,7 @@ const simpleFacilities = [
   {
     title: "CCTV Cameras",
     icon: Camera,
-    image: "/src/assets/Gallery/CCTV.png",
+    image: cctvImage,
     description:
       "Photographs of CCTV cameras installed in the Ashram School and premises.",
     items: [
@@ -281,7 +301,7 @@ const simpleFacilities = [
   {
     title: "Kitchen & Storeroom",
     icon: Warehouse,
-    image: "/src/assets/Gallery/Kit.jpeg",
+    image: kitchenImage,
     description:
       "Photographs documenting the kitchen and storeroom facilities.",
     items: [
@@ -293,7 +313,7 @@ const simpleFacilities = [
   {
     title: "Iron Gate & Boundary Wall",
     icon: Shield,
-    image: "/src/assets/Gallery/Irongate.jpeg",
+    image: ironGateImage,
     description:
       "Photographs of the main iron gate and protective boundary wall.",
     items: [
@@ -304,7 +324,7 @@ const simpleFacilities = [
   {
     title: "Tree Plantation",
     icon: Trees,
-    image: "/src/assets/Gallery/Tree.jpeg",
+    image: treeImage,
     description:
       "Photographs of trees planted within the Ashram School premises.",
     items: [
@@ -313,6 +333,10 @@ const simpleFacilities = [
     ],
   },
 ];
+
+/* =========================================
+   COMMITTEE DATA
+========================================= */
 
 const committeeMembers = [
   {
@@ -330,6 +354,9 @@ const alumniMembers = [
   },
 ];
 
+/* =========================================
+   PHOTO COMPONENT
+========================================= */
 
 function PhotoPlaceholder({ title, image }) {
   return (
@@ -344,6 +371,10 @@ function PhotoPlaceholder({ title, image }) {
   );
 }
 
+/* =========================================
+   MAIN PAGE
+========================================= */
+
 export default function FacilitiesGallery() {
   return (
     <main className="facilities-page">
@@ -351,11 +382,7 @@ export default function FacilitiesGallery() {
       {/* PAGE HEADER */}
       <section className="inner-page-header">
         <div className="container">
-          
-
           <h1>Facilities & Gallery</h1>
-
-          
         </div>
       </section>
 
@@ -380,7 +407,9 @@ export default function FacilitiesGallery() {
 
             {/* HOSTEL */}
             <div className="facility-card">
+
               <div className="facility-card-header">
+
                 <div className="facility-icon">
                   <Coffee size={22} />
                 </div>
@@ -389,10 +418,13 @@ export default function FacilitiesGallery() {
                   <h3>Hostel Department Timetable</h3>
                   <p>Breakfast, lunch and evening meal schedule</p>
                 </div>
+
               </div>
 
               <div className="table-wrapper">
+
                 <table className="facility-table">
+
                   <thead>
                     <tr>
                       <th>Meal</th>
@@ -402,6 +434,7 @@ export default function FacilitiesGallery() {
                   </thead>
 
                   <tbody>
+
                     {hostelTimetable.map((item) => (
                       <tr key={item.meal}>
                         <td>{item.meal}</td>
@@ -409,14 +442,20 @@ export default function FacilitiesGallery() {
                         <td>{item.details}</td>
                       </tr>
                     ))}
+
                   </tbody>
+
                 </table>
+
               </div>
+
             </div>
 
             {/* SCHOOL */}
             <div className="facility-card">
+
               <div className="facility-card-header">
+
                 <div className="facility-icon">
                   <GraduationCap size={22} />
                 </div>
@@ -425,52 +464,65 @@ export default function FacilitiesGallery() {
                   <h3>School Department Timetable</h3>
                   <p>Academic periods and daily school schedule</p>
                 </div>
+
               </div>
 
               <div className="table-wrapper">
+
                 <table className="facility-table">
+
                   <thead>
                     <tr>
                       <th>Period</th>
                       <th>Time</th>
-                     
                     </tr>
                   </thead>
 
                   <tbody>
+
                     {schoolTimetable.map((item) => (
                       <tr key={item.period}>
                         <td>{item.period}</td>
                         <td>{item.time}</td>
-                        
                       </tr>
                     ))}
+
                   </tbody>
+
                 </table>
+
               </div>
+
             </div>
 
           </div>
 
           {/* =========================================
-              WEEKLY FOOD MENU - NEW TABLE
+              WEEKLY FOOD MENU
           ========================================= */}
 
           <div className="weekly-food-menu-card">
 
             <div className="facility-card-header">
+
               <div className="facility-icon">
                 <Coffee size={22} />
               </div>
 
               <div>
-                <h3>साप्ताहिक भोजन मेनू तक्ता सन-२०२६-२०२७</h3>
+                <h3>
+                  साप्ताहिक भोजन मेनू तक्ता सन-२०२६-२०२७
+                </h3>
+
                 <p>वसतिगृह विभाग</p>
               </div>
+
             </div>
 
             <div className="weekly-food-table-wrapper">
+
               <table className="weekly-food-table">
+
                 <thead>
                   <tr>
                     <th>वार</th>
@@ -486,8 +538,10 @@ export default function FacilitiesGallery() {
                 </thead>
 
                 <tbody>
+
                   {weeklyFoodMenu.map((item, index) => (
                     <tr key={item.day}>
+
                       <td>{item.day}</td>
 
                       {index === 0 && (
@@ -513,12 +567,18 @@ export default function FacilitiesGallery() {
                       )}
 
                       <td>{item.eveningMeal}</td>
+
                       <td>{item.pulses}</td>
+
                       <td>{item.other}</td>
+
                     </tr>
                   ))}
+
                 </tbody>
+
               </table>
+
             </div>
 
             <p className="weekly-food-note">
@@ -535,23 +595,31 @@ export default function FacilitiesGallery() {
       ========================================= */}
 
       <section className="facility-section facility-section-gray">
+
         <div className="container">
 
           <div className="section-heading-simple">
-            <p className="section-label">EDUCATIONAL FACILITIES</p>
+
+            <p className="section-label">
+              EDUCATIONAL FACILITIES
+            </p>
 
             <h2>Classrooms</h2>
 
             <p>
-              Class-wise classroom photographs with the number of classrooms
-              and area.
+              Class-wise classroom photographs with the number of
+              classrooms and area.
             </p>
+
           </div>
 
           <div className="facility-card-grid">
 
             {classrooms.map((classroom) => (
-              <article className="gallery-card" key={classroom.title}>
+              <article
+                className="gallery-card"
+                key={classroom.title}
+              >
 
                 <PhotoPlaceholder
                   title={classroom.title}
@@ -559,9 +627,11 @@ export default function FacilitiesGallery() {
                 />
 
                 <div className="gallery-card-content">
+
                   <h3>{classroom.title}</h3>
 
                   <div className="facility-stats">
+
                     <div>
                       <span>Number of Classrooms</span>
                       <strong>{classroom.count}</strong>
@@ -571,14 +641,18 @@ export default function FacilitiesGallery() {
                       <span>Area</span>
                       <strong>{classroom.area}</strong>
                     </div>
+
                   </div>
+
                 </div>
 
               </article>
             ))}
 
           </div>
+
         </div>
+
       </section>
 
       {/* =========================================
@@ -586,23 +660,31 @@ export default function FacilitiesGallery() {
       ========================================= */}
 
       <section className="facility-section">
+
         <div className="container">
 
           <div className="section-heading-simple">
-            <p className="section-label">RESIDENTIAL FACILITIES</p>
+
+            <p className="section-label">
+              RESIDENTIAL FACILITIES
+            </p>
 
             <h2>Student Residential Rooms</h2>
 
             <p>
-              Photographs and details of student residential rooms, including
-              room, area, bed and mattress information.
+              Photographs and details of student residential rooms,
+              including room, area, bed and mattress information.
             </p>
+
           </div>
 
           <div className="facility-card-grid">
 
             {residentialRooms.map((room) => (
-              <article className="gallery-card" key={room.title}>
+              <article
+                className="gallery-card"
+                key={room.title}
+              >
 
                 <PhotoPlaceholder
                   title={room.title}
@@ -610,6 +692,7 @@ export default function FacilitiesGallery() {
                 />
 
                 <div className="gallery-card-content">
+
                   <h3>{room.title}</h3>
 
                   <div className="facility-stats four-column">
@@ -635,27 +718,30 @@ export default function FacilitiesGallery() {
                     </div>
 
                   </div>
+
                 </div>
 
               </article>
             ))}
 
           </div>
+
         </div>
+
       </section>
 
       {/* =========================================
-          DINING HALL
+          DINING HALL / EVENTS
       ========================================= */}
 
       <section className="facility-section facility-section-gray">
+
         <div className="container">
 
           <div className="section-heading-simple">
 
             <h2>Event & Dining Hall</h2>
 
-            
           </div>
 
           <div className="dining-layout">
@@ -667,82 +753,89 @@ export default function FacilitiesGallery() {
 
             <div className="dining-information">
 
-  <h3>Events Held in the School</h3>
-  <p> Various Events </p>
+              <h3>Events Held in the School</h3>
 
-  <div className="inventory-grid">
+              <p>Various Events</p>
 
-    <div>
-      <span>01.</span>
-      <strong>Independence Day</strong>
-    </div>
+              <div className="inventory-grid">
 
-    <div>
-      <span>02.</span>
-      <strong>Republic Day</strong>
-    </div>
+                <div>
+                  <span>01.</span>
+                  <strong>Independence Day</strong>
+                </div>
 
-    <div>
-      <span>03.</span>
-      <strong>Gandhi Jayanti</strong>
-    </div>
+                <div>
+                  <span>02.</span>
+                  <strong>Republic Day</strong>
+                </div>
 
-    <div>
-      <span>04.</span>
-      <strong>Teachers' Day</strong>
-    </div>
+                <div>
+                  <span>03.</span>
+                  <strong>Gandhi Jayanti</strong>
+                </div>
 
-    <div>
-      <span>05.</span>
-      <strong>Children's Day</strong>
-    </div>
+                <div>
+                  <span>04.</span>
+                  <strong>Teachers' Day</strong>
+                </div>
 
-    <div>
-      <span>06.</span>
-      <strong>Annual Sports Day</strong>
-    </div>
+                <div>
+                  <span>05.</span>
+                  <strong>Children's Day</strong>
+                </div>
 
-    <div>
-      <span>07.</span>
-      <strong>Annual Cultural Programme</strong>
-    </div>
+                <div>
+                  <span>06.</span>
+                  <strong>Annual Sports Day</strong>
+                </div>
 
-    <div>
-      <span>08.</span>
-      <strong>Prize Distribution Ceremony</strong>
-    </div>
+                <div>
+                  <span>07.</span>
+                  <strong>Annual Cultural Programme</strong>
+                </div>
 
-  </div>
+                <div>
+                  <span>08.</span>
+                  <strong>Prize Distribution Ceremony</strong>
+                </div>
 
-</div>
+              </div>
+
+            </div>
+
           </div>
 
         </div>
-      </section>
 
-      
+      </section>
 
       {/* =========================================
           OTHER FACILITIES
       ========================================= */}
 
       <section className="facility-section facility-section-gray">
+
         <div className="container">
 
           <div className="section-heading-simple">
-            <p className="section-label">CAMPUS FACILITIES</p>
+
+            <p className="section-label">
+              CAMPUS FACILITIES
+            </p>
 
             <h2>Other Facilities</h2>
 
             <p>
-              Photographic documentation of other important facilities and
-              infrastructure.
+              Photographic documentation of other important
+              facilities and infrastructure.
             </p>
+
           </div>
 
           <div className="simple-facility-grid">
 
             {simpleFacilities.map((facility) => {
+
               const Icon = facility.icon;
 
               return (
@@ -770,17 +863,20 @@ export default function FacilitiesGallery() {
 
                   </div>
 
-                    <PhotoPlaceholder
-                      title={facility.title}
-                      image={facility.image}
-                    />
+                  <PhotoPlaceholder
+                    title={facility.title}
+                    image={facility.image}
+                  />
+
                 </article>
               );
+
             })}
 
           </div>
 
         </div>
+
       </section>
 
       {/* =========================================
@@ -788,17 +884,24 @@ export default function FacilitiesGallery() {
       ========================================= */}
 
       <section className="facility-section">
+
         <div className="container">
 
           <div className="section-heading-simple">
-            <p className="section-label">COMMUNITY PARTICIPATION</p>
 
-            <h2>Parents' Committee & Alumni Association</h2>
+            <p className="section-label">
+              COMMUNITY PARTICIPATION
+            </p>
+
+            <h2>
+              Parents' Committee & Alumni Association
+            </h2>
 
             <p>
-              Lists, photographs and contact information of the Parents'
-              Committee and Alumni Association.
+              Lists, photographs and contact information of the
+              Parents' Committee and Alumni Association.
             </p>
+
           </div>
 
           <div className="committee-grid">
@@ -814,14 +917,16 @@ export default function FacilitiesGallery() {
 
                 <div>
                   <h3>Parents' Committee</h3>
-                  <p>Committee members and contact details</p>
+                  <p>
+                    Committee members and contact details
+                  </p>
                 </div>
 
               </div>
 
               <PhotoPlaceholder
                 title="Parents' Committee"
-                image="/src/assets/Gallery/parent.jpeg"
+                image={parentsImage}
               />
 
               <div className="table-wrapper">
@@ -867,14 +972,16 @@ export default function FacilitiesGallery() {
 
                 <div>
                   <h3>Alumni Association</h3>
-                  <p>Alumni members and contact details</p>
+                  <p>
+                    Alumni members and contact details
+                  </p>
                 </div>
 
               </div>
 
               <PhotoPlaceholder
-              title="Alumni Association"
-              image="/src/assets/Gallery/alu.png"
+                title="Alumni Association"
+                image={alumniImage}
               />
 
               <div className="table-wrapper">
@@ -912,6 +1019,7 @@ export default function FacilitiesGallery() {
           </div>
 
         </div>
+
       </section>
 
       {/* =========================================
@@ -919,17 +1027,25 @@ export default function FacilitiesGallery() {
       ========================================= */}
 
       <section className="page-navigation">
+
         <div className="container page-navigation-inner">
 
-          <a href="/about" className="page-nav-link">
+          <a
+            href="/about"
+            className="page-nav-link"
+          >
             ← About & Admissions
           </a>
 
-          <a href="/contact" className="page-nav-link">
+          <a
+            href="/contact"
+            className="page-nav-link"
+          >
             Contact →
           </a>
 
         </div>
+
       </section>
 
     </main>

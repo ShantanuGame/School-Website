@@ -14,12 +14,12 @@ const contactDetails = {
   email: "sgmmas.warvandi@gmail.com",
 
   address: {
-    
-    village: "मु. वरवंडी पो. मुळानगर.  जि. अहिल्यानगर.",
+    institution: "श्री. गाडगे महाराज माध्यमिक आश्रमशाळा, वरवंडी",
+    village: "मु. वरवंडी पो. मुळानगर.",
     taluka: "ता. राहुरी",
     district: "जि. अहिल्यानगर.",
     state: "Maharashtra",
-    pincode: "पीन नं. 413722",
+    pincode: "413722",
   },
 
   contactPerson: {
@@ -40,20 +40,12 @@ export default function Contact() {
       {/* PAGE HEADER */}
       <section className="inner-page-header">
         <div className="container">
-
-          
-
           <h1>Contact</h1>
-
-          
-
         </div>
       </section>
 
-
       {/* CONTACT INFORMATION */}
       <section className="contact-section">
-
         <div className="container">
 
           <div className="contact-grid">
@@ -73,19 +65,15 @@ export default function Contact() {
                 <h3>Contact Numbers</h3>
 
                 <div className="contact-values">
-
                   {contactDetails.phoneNumbers.map(
                     (number, index) => (
                       <p key={index}>{number}</p>
                     )
                   )}
-
                 </div>
-
               </div>
 
             </article>
-
 
             {/* EMAIL */}
             <article className="contact-card">
@@ -95,7 +83,6 @@ export default function Contact() {
               </div>
 
               <div>
-
                 <span className="contact-label">
                   Official Communication
                 </span>
@@ -105,11 +92,9 @@ export default function Contact() {
                 <p className="contact-main-value">
                   {contactDetails.email}
                 </p>
-
               </div>
 
             </article>
-
 
             {/* CONTACT PERSON */}
             <article className="contact-card">
@@ -119,7 +104,6 @@ export default function Contact() {
               </div>
 
               <div>
-
                 <span className="contact-label">
                   Contact Person
                 </span>
@@ -131,11 +115,9 @@ export default function Contact() {
                 <p className="contact-main-value">
                   {contactDetails.contactPerson.designation}
                 </p>
-
               </div>
 
             </article>
-
 
             {/* ADDRESS */}
             <article className="contact-card address-card">
@@ -145,7 +127,6 @@ export default function Contact() {
               </div>
 
               <div>
-
                 <span className="contact-label">
                   Postal Address
                 </span>
@@ -159,14 +140,12 @@ export default function Contact() {
                   </p>
 
                   <p>
-                    {contactDetails.address.village},
-                    {" "}
+                    {contactDetails.address.village},{" "}
                     {contactDetails.address.taluka}
                   </p>
 
                   <p>
-                    {contactDetails.address.district},
-                    {" "}
+                    {contactDetails.address.district},{" "}
                     {contactDetails.address.state}
                   </p>
 
@@ -182,7 +161,6 @@ export default function Contact() {
 
           </div>
 
-
           {/* MAP */}
           <div className="contact-map-card">
 
@@ -193,7 +171,6 @@ export default function Contact() {
               </div>
 
               <div>
-
                 <span className="contact-label">
                   LOCATION
                 </span>
@@ -203,11 +180,9 @@ export default function Contact() {
                 <p>
                   Geographical location of the Ashram School.
                 </p>
-
               </div>
 
             </div>
-
 
             <div className="contact-map">
 
@@ -224,17 +199,20 @@ export default function Contact() {
 
             </div>
 
-
             <div className="contact-coordinates">
 
               <div>
                 <span>Latitude</span>
-                <strong>19.319861</strong>
+                <strong>
+                  {contactDetails.location.latitude}
+                </strong>
               </div>
 
               <div>
                 <span>Longitude</span>
-                <strong>74.637722</strong>
+                <strong>
+                  {contactDetails.location.longitude}
+                </strong>
               </div>
 
             </div>
@@ -242,7 +220,6 @@ export default function Contact() {
           </div>
 
         </div>
-
       </section>
 
     </main>

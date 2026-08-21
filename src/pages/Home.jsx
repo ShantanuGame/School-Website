@@ -6,35 +6,45 @@ import {
   Users,
 } from "lucide-react";
 
+import schoolPremImage from "../assets/HomePage/Schoolprem.jpeg";
+import facilitiesImage from "../assets/HomePage/Facilities.jpeg";
+import hostelImage from "../assets/HomePage/Hostel.jpeg";
+import girlsImage from "../assets/HomePage/Girls.jpeg";
+
 const institution = {
   name: "श्री. गाडगे महाराज माध्यमिक आश्रमशाळा, वरवंडी",
   type: "श्री. गाडगे महाराज मिशन,मुंबई संचलित",
   department: "इतर मागास बहुजन कल्याण विभाग, महाराष्ट्र शासन",
 
   welcome:
-    "आमच्या संस्थेत आपले स्वागत आहे. या पोर्टलद्वारे आमच्या शैक्षणिक सुविधा, विद्यार्थी, कर्मचारी, शाळेच्या पायाभूत सुविधा आणि संस्थेशी संबंधित इतर महत्त्वाची माहिती उपलब्ध करून देण्यात आली आहे."
+    "आमच्या संस्थेत आपले स्वागत आहे. या पोर्टलद्वारे आमच्या शैक्षणिक सुविधा, विद्यार्थी, कर्मचारी, शाळेच्या पायाभूत सुविधा आणि संस्थेशी संबंधित इतर महत्त्वाची माहिती उपलब्ध करून देण्यात आली आहे.",
+
+  address:
+    "मु. वरवंडी पो. मुळानगर. ता. राहुरी जि. अहिल्यानगर. पीन नं. 413722.",
 };
 
 const highlights = [
   {
     title: "शाळेचा परिसर",
-    description: "आमच्या शैक्षणिक परिसराची आणि पायाभूत सुविधांची माहिती पहा.",
-    image: "/src/assets/HomePage/Schoolprem.jpeg",
+    description:
+      "आमच्या शैक्षणिक परिसराची आणि पायाभूत सुविधांची माहिती पहा.",
+    image: schoolPremImage,
   },
   {
     title: "शैक्षणिक सुविधा",
     description: "वर्गखोल्या आणि शैक्षणिक सुविधांबद्दल माहिती.",
-    image: "/src/assets/HomePage/Facilities.jpeg",
+    image: facilitiesImage,
   },
   {
     title: "निवासी सुविधा",
-    description: "विद्यार्थ्यांसाठी उपलब्ध निवासी सुविधांबद्दल माहिती.",
-    image: "/src/assets/HomePage/Hostel.jpeg",
+    description:
+      "विद्यार्थ्यांसाठी उपलब्ध निवासी सुविधांबद्दल माहिती.",
+    image: hostelImage,
   },
   {
     title: "मुलींसाठी स्वतंत्र परिसर",
     description: "परिसरातील उपलब्ध सुविधांची माहिती पहा.",
-    image: "/src/assets/HomePage/Girls.jpeg",
+    image: girlsImage,
   },
 ];
 
@@ -57,7 +67,8 @@ const quickInfo = [
   {
     icon: MapPin,
     title: "स्थान",
-    value: "मु. वरवंडी पो. मुळानगर. ता. राहुरी जि. अहिल्यानगर. पीन नं. 413722.",
+    value:
+      "मु. वरवंडी पो. मुळानगर. ता. राहुरी जि. अहिल्यानगर. पीन नं. 413722.",
   },
 ];
 
@@ -88,7 +99,10 @@ export default function Home() {
                 <ArrowRight size={18} />
               </a>
 
-              <a href="/facilities" className="button button-outline">
+              <a
+                href="/facilities"
+                className="button button-outline"
+              >
                 सुविधा & Gallery
               </a>
             </div>
@@ -104,7 +118,10 @@ export default function Home() {
               const Icon = item.icon;
 
               return (
-                <div className="quick-info-card" key={item.title}>
+                <div
+                  className="quick-info-card"
+                  key={item.title}
+                >
                   <div className="quick-info-icon">
                     <Icon size={22} />
                   </div>
@@ -120,7 +137,6 @@ export default function Home() {
         </div>
       </section>
 
-      
       {/* HIGHLIGHTS */}
       <section className="highlights-section">
         <div className="container">
@@ -137,9 +153,15 @@ export default function Home() {
 
           <div className="highlight-grid">
             {highlights.map((item) => (
-              <article className="highlight-card" key={item.title}>
+              <article
+                className="highlight-card"
+                key={item.title}
+              >
                 <div className="highlight-image">
-                  <img src={item.image} alt={item.title} />
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                  />
                 </div>
 
                 <div className="highlight-content">
@@ -148,7 +170,8 @@ export default function Home() {
                   <p>{item.description}</p>
 
                   <a href="/facilities">
-                    सुविधा पहा <ArrowRight size={15} />
+                    सुविधा पहा
+                    <ArrowRight size={15} />
                   </a>
                 </div>
               </article>
@@ -172,7 +195,10 @@ export default function Home() {
             <p>{institution.address}</p>
           </div>
 
-          <a href="/contact" className="button button-dark">
+          <a
+            href="/contact"
+            className="button button-dark"
+          >
             संपर्क
             <ArrowRight size={17} />
           </a>

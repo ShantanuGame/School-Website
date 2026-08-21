@@ -19,13 +19,19 @@ const institution = {
     pincode: "413722",
   },
 
-  registration: "व्ही.ए.एस.1090//37661/प्र.क्र.-14/मावक ६, मंत्रालय विस्तार भवन, मुंबई-32",
+  registration:
+    "व्ही.ए.एस.1090//37661/प्र.क्र.-14/मावक ६, मंत्रालय विस्तार भवन, मुंबई-32",
+
   medium: "मराठी",
   curriculum: "State Board Curriculum",
   standards: "इयत्ता- 8वी ते 10वी.",
   sanctionedCapacity: "120",
-  schoolgrandorder: "शाळा ग्रँड ऑर्डर क्र. २७/२०२३-२४, दिनांक ०५/०६/२०२३",
-  satbara: "सातबारा क्र. २७/२०२३-२४, दिनांक ०५/०६/२०२३",
+
+  schoolgrandorder:
+    "शाळा ग्रँड ऑर्डर क्र. २७/२०२३-२४, दिनांक ०५/०६/२०२३",
+
+  satbara:
+    "सातबारा क्र. २७/२०२३-२४, दिनांक ०५/०६/२०२३",
 };
 
 /*
@@ -40,7 +46,6 @@ const studentColumns = [
   "Total Students",
   "Resident Students",
   "Non-Resident Students",
-  
 ];
 
 const employeeData = [
@@ -69,39 +74,44 @@ const employeeSummary = {
   employeesAgainstSanctionedPosts: "000",
 };
 
+/* =========================================
+   LOCATION PHOTOS
+========================================= */
+
 const locationPhotos = [
   {
     title: "Headmaster's Room",
     image: "/src/assets/Gallery/HeadMaster.jpeg",
-    
+    description: "Photograph of the Headmaster's room.",
+    latitude: "—",
+    longitude: "—",
   },
   {
     title: "Hostel Superintendent's Residence",
-    image: "/src/assets/hero.png",
+    image: "/src/assets/Gallery/Superintendent.jpeg",
+    description: "Photograph of the Hostel Superintendent's residence.",
+    latitude: "—",
+    longitude: "—",
   },
 ];
-
 
 const studentData = {
   total: {
     total: "142",
     resident: "120",
     nonResident: "22",
-    
   },
 
   aadhaarLinked: {
     total: "141",
     resident: "120",
     nonResident: "21",
-    
   },
 
   aadhaarNotLinked: {
     total: "1",
     resident: "000",
     nonResident: "1",
-    
   },
 };
 
@@ -125,7 +135,6 @@ function StudentTable({ title, data, description }) {
     data.total,
     data.resident,
     data.nonResident,
-    
   ];
 
   return (
@@ -168,22 +177,28 @@ function StudentTable({ title, data, description }) {
 export default function AboutAdmissions() {
   return (
     <main className="about-page">
-      {/* PAGE HEADER */}
+
+      {/* =========================================
+          PAGE HEADER
+      ========================================= */}
+
       <section className="inner-page-header">
         <div className="container">
-
           <h1>About & Admissions</h1>
-
-         
         </div>
       </section>
 
-      {/* INSTITUTIONAL IDENTITY */}
+      {/* =========================================
+          INSTITUTIONAL IDENTITY
+      ========================================= */}
+
       <section className="institution-section">
         <div className="container">
-          
 
           <div className="institution-grid">
+
+            {/* OFFICIAL NAME */}
+
             <div className="information-card institution-name-card">
               <div className="information-icon">
                 <Building2 size={22} />
@@ -194,6 +209,8 @@ export default function AboutAdmissions() {
                 <strong>{institution.name}</strong>
               </div>
             </div>
+
+            {/* VILLAGE */}
 
             <div className="information-card">
               <div className="information-icon">
@@ -206,6 +223,8 @@ export default function AboutAdmissions() {
               </div>
             </div>
 
+            {/* TALUKA */}
+
             <div className="information-card">
               <div className="information-icon">
                 <MapPin size={22} />
@@ -216,6 +235,8 @@ export default function AboutAdmissions() {
                 <strong>{institution.address.taluka}</strong>
               </div>
             </div>
+
+            {/* DISTRICT */}
 
             <div className="information-card">
               <div className="information-icon">
@@ -228,6 +249,8 @@ export default function AboutAdmissions() {
               </div>
             </div>
 
+            {/* MEDIUM */}
+
             <div className="information-card">
               <div className="information-icon">
                 <BookOpen size={22} />
@@ -239,6 +262,8 @@ export default function AboutAdmissions() {
               </div>
             </div>
 
+            {/* STANDARDS */}
+
             <div className="information-card">
               <div className="information-icon">
                 <GraduationCap size={22} />
@@ -249,42 +274,53 @@ export default function AboutAdmissions() {
                 <strong>{institution.standards}</strong>
               </div>
             </div>
+
+            {/* 7/12 UTARA */}
+
             <a
-  href="https://drive.google.com/file/d/1hzm4sdOOEBGufnR9fXfDNRK2Z6DuLrd9/view?usp=sharing"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="information-card-link"
-> 
-          <div className="information-card">
-              <div className="information-icon">
-                <GraduationCap size={22} />
-              </div>
+              href="https://drive.google.com/file/d/1hzm4sdOOEBGufnR9fXfDNRK2Z6DuLrd9/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="information-card-link"
+            >
+              <div className="information-card">
+                <div className="information-icon">
+                  <GraduationCap size={22} />
+                </div>
 
-              <div>
-                <span>7/12उतारा</span>
-                <strong>{institution.satbara}</strong>
+                <div>
+                  <span>7/12उतारा</span>
+                  <strong>{institution.satbara}</strong>
+                </div>
               </div>
-            </div>
             </a>
-            <a href="https://drive.google.com/file/d/1J5bi8nBr7fEjmuYPDWiMYarj_MttkOLQ/view?usp=sharing"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="information-card-link">
-            <div className="information-card">
-              <div className="information-icon">
-                <GraduationCap size={22} />
-              </div>
 
-              <div>
-                <span>शाळा मान्यता आदेश</span>
-                <strong>{institution.schoolgrandorder}</strong>
+            {/* SCHOOL RECOGNITION ORDER */}
+
+            <a
+              href="https://drive.google.com/file/d/1J5bi8nBr7fEjmuYPDWiMYarj_MttkOLQ/view?usp=sharing"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="information-card-link"
+            >
+              <div className="information-card">
+                <div className="information-icon">
+                  <GraduationCap size={22} />
+                </div>
+
+                <div>
+                  <span>शाळा मान्यता आदेश</span>
+                  <strong>{institution.schoolgrandorder}</strong>
+                </div>
               </div>
-            </div>
             </a>
+
           </div>
-          
+
+          {/* IDENTITY DETAILS */}
 
           <div className="identity-details">
+
             <div>
               <span>Full Address</span>
 
@@ -308,14 +344,21 @@ export default function AboutAdmissions() {
 
               <strong>{institution.curriculum}</strong>
             </div>
+
           </div>
+
         </div>
       </section>
 
-      {/* ADMISSION CAPACITY */}
+      {/* =========================================
+          ADMISSION CAPACITY
+      ========================================= */}
+
       <section className="capacity-section">
         <div className="container">
+
           <div className="capacity-card">
+
             <div className="capacity-icon">
               <Users size={28} />
             </div>
@@ -335,14 +378,21 @@ export default function AboutAdmissions() {
               {institution.sanctionedCapacity}
               <span>Students</span>
             </div>
+
           </div>
+
         </div>
       </section>
 
-      {/* STUDENT TABLES */}
+      {/* =========================================
+          STUDENT TABLES
+      ========================================= */}
+
       <section className="student-data-section">
         <div className="container">
+
           <div className="section-heading-simple">
+
             <p className="section-label">ENROLLMENT DATA</p>
 
             <h2>Student Information</h2>
@@ -350,6 +400,7 @@ export default function AboutAdmissions() {
             <p>
               Class-wise student information separated by residential status.
             </p>
+
           </div>
 
           <StudentTable
@@ -369,13 +420,19 @@ export default function AboutAdmissions() {
             description="Students whose Aadhaar information is not linked."
             data={studentData.aadhaarNotLinked}
           />
+
         </div>
       </section>
 
-      {/* STAFF */}
+      {/* =========================================
+          STAFF
+      ========================================= */}
+
       <section className="staff-section">
         <div className="container">
+
           <div className="section-heading-simple">
+
             <p className="section-label">STAFF INFORMATION</p>
 
             <h2>Staff / Teacher Position</h2>
@@ -384,10 +441,13 @@ export default function AboutAdmissions() {
               Sanctioned, filled and vacant positions for teaching and
               non-teaching staff.
             </p>
+
           </div>
 
           <div className="table-wrapper">
+
             <table className="staff-table">
+
               <thead>
                 <tr>
                   <th>Category</th>
@@ -398,6 +458,7 @@ export default function AboutAdmissions() {
               </thead>
 
               <tbody>
+
                 {staffData.map((staff) => (
                   <tr key={staff.category}>
                     <td>{staff.category}</td>
@@ -406,26 +467,27 @@ export default function AboutAdmissions() {
                     <td>{staff.vacant}</td>
                   </tr>
                 ))}
+
               </tbody>
+
             </table>
+
           </div>
+
         </div>
       </section>
-      {/* EMPLOYEE / OFFICER DETAILS */}
+
+      {/* =========================================
+          EMPLOYEE / OFFICER DETAILS
+      ========================================= */}
+
       <section className="employee-section">
         <div className="container">
 
           <div className="section-heading-simple">
-         
-
             <h2>Employee Details</h2>
-
-          
           </div>
 
-          {/* SUMMARY */}
-          
-          {/* COMBINED TABLE */}
           <div className="table-wrapper employee-table-wrapper">
 
             <table className="employee-table">
@@ -444,6 +506,7 @@ export default function AboutAdmissions() {
               </thead>
 
               <tbody>
+
                 {employeeData.map((employee, index) => (
                   <tr key={index}>
                     <td>{index + 1}</td>
@@ -456,6 +519,7 @@ export default function AboutAdmissions() {
                     <td>{employee.details}</td>
                   </tr>
                 ))}
+
               </tbody>
 
             </table>
@@ -464,19 +528,29 @@ export default function AboutAdmissions() {
 
         </div>
       </section>
-            {/* HEADMASTER / SUPERINTENDENT PHOTOS */}
+
+      {/* =========================================
+          HEADMASTER / SUPERINTENDENT PHOTOS
+      ========================================= */}
+
       <section className="location-photo-section">
         <div className="container">
 
           <div className="section-heading-simple">
-            <p className="section-label">LOCATION & PHOTOGRAPHS</p>
 
-            <h2>Institutional Residential / Office Locations</h2>
+            <p className="section-label">
+              LOCATION & PHOTOGRAPHS
+            </p>
+
+            <h2>
+              Institutional Residential / Office Locations
+            </h2>
 
             <p>
               Photographs and geographical coordinates of the Headmaster's
               room and Hostel Superintendent's residence.
             </p>
+
           </div>
 
           <div className="location-photo-grid">
@@ -488,10 +562,12 @@ export default function AboutAdmissions() {
               >
 
                 <div className="location-photo-image">
+
                   <img
                     src={location.image}
                     alt={location.title}
                   />
+
                 </div>
 
                 <div className="location-photo-content">
@@ -523,9 +599,14 @@ export default function AboutAdmissions() {
 
         </div>
       </section>
-      {/* BACK / NEXT */}
+
+      {/* =========================================
+          BACK / NEXT
+      ========================================= */}
+
       <section className="page-navigation">
         <div className="container page-navigation-inner">
+
           <a href="/" className="page-nav-link">
             <ArrowLeft size={17} />
             Home
@@ -535,8 +616,10 @@ export default function AboutAdmissions() {
             Facilities & Gallery
             <ArrowRight size={17} />
           </a>
+
         </div>
       </section>
+
     </main>
   );
 }
