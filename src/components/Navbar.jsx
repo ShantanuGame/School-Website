@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import logo from "../assets/logo.jpg";
 
 export default function Navbar({ navigate }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -23,10 +24,7 @@ export default function Navbar({ navigate }) {
           }}
         >
           <div className="brand-mark">
-            <img
-              src="/src/assets/logo.jpg"
-              alt="Ashram Logo"
-            />
+            <img src={logo} alt="Ashram Logo" />
           </div>
 
           <div>
